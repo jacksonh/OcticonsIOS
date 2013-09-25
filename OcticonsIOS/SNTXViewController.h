@@ -10,6 +10,9 @@
 
 @interface SNTXViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UIButton *iconButton;
+@property (weak, nonatomic) IBOutlet UILabel *iconName;
+
+- (IBAction)iconButtonTapped:(id)sender;
 
 @end

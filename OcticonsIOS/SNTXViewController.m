@@ -8,9 +8,11 @@
 
 #import "SNTXViewController.h"
 #import "UIImage+Octions.h"
+#import "NSString+Octicons.h"
 
-
-@interface SNTXViewController ()
+@interface SNTXViewController () {
+	OCTIcon _currentIcon;
+}
 
 @end
 
@@ -18,15 +20,33 @@
 
 @implementation SNTXViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		_currentIcon = OCTIconAlert;
+	}
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-	[[self iconView] setImage:[UIImage octicon_imageWithIcon:@"GitPullRequest"
-											 backgroundColor:[UIColor whiteColor]
-												   iconColor:[UIColor darkGrayColor]
-												   iconScale:1.0
-													 andSize:CGSizeMake(150.0F, 150.0F)]];
+	[self sntx_displayCurrentIcon];
+}
+
+- (void)sntx_displayCurrentIcon
+{
+	NSString *text = [NSString octicon_iconDescriptionForEnum:_currentIcon];
+	UIImage *image = [UIImage octicon_imageWithIcon:text
+									backgroundColor:[UIColor whiteColor]
+										  iconColor:[UIColor darkGrayColor]
+										  iconScale:1.0
+											andSize:CGSizeMake(150.0F, 150.0F)];
+
+	[[self iconName] setText:text];
+	[[self iconButton] setImage:image forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,4 +56,9 @@
 }
 
 
+- (IBAction)iconButtonTapped:(id)sender
+{
+	_currentIcon = (_currentIcon + 1) % OCTIconZap;
+	[self sntx_displayCurrentIcon];
+}
 @end
