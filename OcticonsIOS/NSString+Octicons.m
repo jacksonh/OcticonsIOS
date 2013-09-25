@@ -18,6 +18,18 @@
     return [enums[string] integerValue];
 }
 
++ (NSString *)octicon_iconDescriptionForEnum:(OCTIcon)icon
+{
+	NSDictionary *dict = [self enumDictionary];
+
+    for (NSString *key in dict) {
+		NSNumber *value = [dict valueForKey:key];
+		if ([value integerValue] == icon)
+			return key;
+	}
+	return nil;
+}
+
 + (NSString *)octicon_iconStringForEnum:(OCTIcon)value
 {
     return [self octiconIcons][value];
@@ -28,7 +40,7 @@
     return [self octicon_iconStringForEnum:[self octicon_enumForIconIdentifier:identifier]];
 }
 
-+ (NSArray*)octiconIcons
++ (NSArray *)octiconIcons
 {
     static NSArray *octiconIcons;
     if (!octiconIcons) {
@@ -213,7 +225,7 @@
     return octiconIcons;
 }
 
-+ (NSDictionary*)enumDictionary
++ (NSDictionary *)enumDictionary
 {
 	static NSDictionary *enumDictionary;
 	if (!enumDictionary) {

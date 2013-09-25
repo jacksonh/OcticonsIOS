@@ -192,8 +192,8 @@ typedef NS_ENUM(NSInteger, OCTIcon) {
 
 @interface NSString (Octicons)
 
-
 + (NSString *)octicon_iconStringForEnum:(OCTIcon)value;
++ (NSString *)octicon_iconDescriptionForEnum:(OCTIcon)icon;
 + (OCTIcon)octicon_enumForIconIdentifier:(NSString *)string;
 + (NSString *)octicon_iconStringForIconIdentifier:(NSString*)identifier;
 
