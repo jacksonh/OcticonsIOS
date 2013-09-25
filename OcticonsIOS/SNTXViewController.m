@@ -49,13 +49,6 @@
 	[[self iconButton] setImage:image forState:UIControlStateNormal];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 - (IBAction)iconButtonTapped:(id)sender
 {
 	_currentIcon = (_currentIcon + 1) % OCTIconZap;
