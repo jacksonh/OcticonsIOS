@@ -14,8 +14,8 @@ Examples
 ```Objective-C
 
 	UIImage *image = [UIImage octicon_imageWithIcon:@"GitPullRequest"
-								                	backgroundColor:[UIColor whiteColor]
-										                    iconColor:[UIColor darkGrayColor]
-										                    iconScale:1.0
-											                    andSize:CGSizeMake(150.0F, 150.0F)];
+                                        backgroundColor:[UIColor whiteColor]
+                                              iconColor:[UIColor darkGrayColor]
+                                              iconScale:1.0
+                                                andSize:CGSizeMake(150.0F, 150.0F)];
 ```
