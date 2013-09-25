@@ -1,0 +1,54 @@
+//
+//  UIImage+Octions.m
+//  OcticonsIOS
+//
+//  Created by Jackson Harper on 9/24/13.
+//  Copyright (c) 2013 SyntaxTree, Inc. All rights reserved.
+//
+//
+// Lifted from ios-fontawesome:
+//  https://github.com/pepibumur/ios-fontawesome
+//
+
+#import "UIImage+Octions.h"
+#import "NSString+Octicons.h"
+
+@implementation UIImage (Octions)
+
++ (UIImage *)octicon_imageWithIcon:(NSString *)identifier
+				   backgroundColor:(UIColor *)bgColor
+						 iconColor:(UIColor *)iconColor
+						 iconScale:(CGFloat)scale
+						   andSize:(CGSize)size
+{
+	if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
+		UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
+	} else {
+		UIGraphicsBeginImageContext(size);
+	}
+
+    // Abstracted Attributes
+	NSString* textContent = [NSString octicon_iconStringForIconIdentifier:identifier];
+
+	// Rectangle Drawing
+	UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, size.width, size.height)];
+	[bgColor setFill];
+	[rectanglePath fill];
+
+    // Text Drawing
+	float fontSize=(MIN(size.height,size.width))*scale;
+	CGRect textRect = CGRectMake(size.width/2-(fontSize/2)*1.2, size.height/2-fontSize/2, fontSize*1.2, fontSize);
+	[iconColor setFill];
+	[textContent drawInRect:textRect
+				   withFont:[UIFont fontWithName:kOcticonsFamilyName
+											size:(float)((int)fontSize)]
+			  lineBreakMode:NSLineBreakByWordWrapping
+				  alignment:NSTextAlignmentCenter];
+
+	// Image returns
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return image;
+}
+
+@end
