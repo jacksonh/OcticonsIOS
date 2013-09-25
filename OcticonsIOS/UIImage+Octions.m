@@ -38,12 +38,17 @@
     // Text Drawing
 	float fontSize=(MIN(size.height,size.width))*scale;
 	CGRect textRect = CGRectMake(size.width/2-(fontSize/2)*1.2, size.height/2-fontSize/2, fontSize*1.2, fontSize);
-	[iconColor setFill];
-	[textContent drawInRect:textRect
-				   withFont:[UIFont fontWithName:kOcticonsFamilyName
-											size:(float)((int)fontSize)]
-			  lineBreakMode:NSLineBreakByWordWrapping
-				  alignment:NSTextAlignmentCenter];
+
+	UIFont *font = [UIFont fontWithName:kOcticonsFamilyName size:(float)((int)fontSize)];
+	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+	[paragraphStyle setAlignment:NSTextAlignmentCenter];
+	[paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+
+	[textContent drawInRect:textRect withAttributes:@{
+		NSFontAttributeName:			font,
+		NSParagraphStyleAttributeName:	paragraphStyle,
+		NSForegroundColorAttributeName:	iconColor,
+	}];
 
 	// Image returns
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
