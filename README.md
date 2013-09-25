@@ -1,7 +1,7 @@
 OcticonsIOS
 ===========
 
-A library for easily adding GitHub's Octions to your iOS projects.
+A library for easily adding GitHub's [Octicons](https://github.com/blog/1106-say-hello-to-octicons) to your iOS projects.
 
 This project is heavily based on [ios-fontawesome](https://github.com/alexdrone/ios-fontawesome).
 
