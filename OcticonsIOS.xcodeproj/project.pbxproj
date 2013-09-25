@@ -14,7 +14,6 @@
 		7A1DA82317F25B2F0029024C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA82217F25B2F0029024C /* main.m */; };
 		7A1DA82717F25B2F0029024C /* SNTXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA82617F25B2F0029024C /* SNTXAppDelegate.m */; };
 		7A1DA82A17F25B2F0029024C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA82817F25B2F0029024C /* Main_iPhone.storyboard */; };
-		7A1DA82D17F25B2F0029024C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA82B17F25B2F0029024C /* Main_iPad.storyboard */; };
 		7A1DA83017F25B2F0029024C /* SNTXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA82F17F25B2F0029024C /* SNTXViewController.m */; };
 		7A1DA83217F25B2F0029024C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA83117F25B2F0029024C /* Images.xcassets */; };
 		7A1DA83917F25B2F0029024C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1DA83817F25B2F0029024C /* XCTest.framework */; };
@@ -50,7 +49,6 @@
 		7A1DA82517F25B2F0029024C /* SNTXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNTXAppDelegate.h; sourceTree = "<group>"; };
 		7A1DA82617F25B2F0029024C /* SNTXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNTXAppDelegate.m; sourceTree = "<group>"; };
 		7A1DA82917F25B2F0029024C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		7A1DA82C17F25B2F0029024C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		7A1DA82E17F25B2F0029024C /* SNTXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNTXViewController.h; sourceTree = "<group>"; };
 		7A1DA82F17F25B2F0029024C /* SNTXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNTXViewController.m; sourceTree = "<group>"; };
 		7A1DA83117F25B2F0029024C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				7A1DA82517F25B2F0029024C /* SNTXAppDelegate.h */,
 				7A1DA82617F25B2F0029024C /* SNTXAppDelegate.m */,
 				7A1DA82817F25B2F0029024C /* Main_iPhone.storyboard */,
-				7A1DA82B17F25B2F0029024C /* Main_iPad.storyboard */,
 				7A1DA82E17F25B2F0029024C /* SNTXViewController.h */,
 				7A1DA82F17F25B2F0029024C /* SNTXViewController.m */,
 				7A1DA84E17F25B7D0029024C /* UIFont+Octicons.h */,
@@ -251,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1DA85817F27C500029024C /* octicons.ttf in Resources */,
-				7A1DA82D17F25B2F0029024C /* Main_iPad.storyboard in Resources */,
 				7A1DA83217F25B2F0029024C /* Images.xcassets in Resources */,
 				7A1DA82A17F25B2F0029024C /* Main_iPhone.storyboard in Resources */,
 				7A1DA82117F25B2F0029024C /* InfoPlist.strings in Resources */,
@@ -315,14 +311,6 @@
 				7A1DA82917F25B2F0029024C /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		7A1DA82B17F25B2F0029024C /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A1DA82C17F25B2F0029024C /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		7A1DA84117F25B300029024C /* InfoPlist.strings */ = {
@@ -419,6 +407,7 @@
 				GCC_PREFIX_HEADER = "OcticonsIOS/OcticonsIOS-Prefix.pch";
 				INFOPLIST_FILE = "OcticonsIOS/OcticonsIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -432,6 +421,7 @@
 				GCC_PREFIX_HEADER = "OcticonsIOS/OcticonsIOS-Prefix.pch";
 				INFOPLIST_FILE = "OcticonsIOS/OcticonsIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -497,6 +487,7 @@
 				7A1DA84A17F25B300029024C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A1DA84B17F25B300029024C /* Build configuration list for PBXNativeTarget "OcticonsIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +496,7 @@
 				7A1DA84D17F25B300029024C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
