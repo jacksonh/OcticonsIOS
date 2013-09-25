@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author       = { "Jackson Harper" => "jacksonh@syntaxtree.com" }
   s.source = {
     :git => 'https://github.com/jacksonh/OcticonsIOS.git',
-    :tag => "0.0.1"
+    :tag => 'v0.0.1'
   }
   s.platform     = :ios, '7.0'
   s.source_files = '*.{h,m}'
