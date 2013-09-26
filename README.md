@@ -19,3 +19,12 @@ Examples
                                               iconScale:1.0
                                                 andSize:CGSizeMake(150.0F, 150.0F)];
 ```
+
+Installation 
+------------
+
+The easiest way to install OcticonsIOS is with [CocoaPods](http://cocoapods.org). Just add the following to your Podfile:
+
+    pod 'OcticonsIOS', '~> 0.0.2'
+
+    
