@@ -10,17 +10,13 @@
 
 @implementation NSString (Octicons)
 
-
-
-+ (OCTIcon)octicon_enumForIconIdentifier:(NSString *)string
-{
-    NSDictionary *enums = [self enumDictionary];
++ (OCTIcon)octicon_enumForIconIdentifier:(NSString *)string {
+    NSDictionary *enums = [self octicon_enumDictionary];
     return [enums[string] integerValue];
 }
 
-+ (NSString *)octicon_iconDescriptionForEnum:(OCTIcon)icon
-{
-	NSDictionary *dict = [self enumDictionary];
++ (NSString *)octicon_iconDescriptionForEnum:(OCTIcon)icon {
+	NSDictionary *dict = [self octicon_enumDictionary];
 
     for (NSString *key in dict) {
 		NSNumber *value = [dict valueForKey:key];
@@ -30,18 +26,15 @@
 	return nil;
 }
 
-+ (NSString *)octicon_iconStringForEnum:(OCTIcon)value
-{
-    return [self octiconIcons][value];
++ (NSString *)octicon_iconStringForEnum:(OCTIcon)value {
+    return [self octicon_icons][value];
 }
 
-+ (NSString *)octicon_iconStringForIconIdentifier:(NSString*)identifier;
-{
++ (NSString *)octicon_iconStringForIconIdentifier:(NSString*)identifier {
     return [self octicon_iconStringForEnum:[self octicon_enumForIconIdentifier:identifier]];
 }
 
-+ (NSArray *)octiconIcons
-{
++ (NSArray *)octicon_icons {
     static NSArray *octiconIcons;
     if (!octiconIcons) {
         octiconIcons = @[@"\uf02d",
@@ -225,8 +218,7 @@
     return octiconIcons;
 }
 
-+ (NSDictionary *)enumDictionary
-{
++ (NSDictionary *)octicon_enumDictionary {
 	static NSDictionary *enumDictionary;
 	if (!enumDictionary) {
 		enumDictionary = @{
