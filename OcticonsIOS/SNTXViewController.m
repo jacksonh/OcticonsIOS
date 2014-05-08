@@ -7,7 +7,7 @@
 //
 
 #import "SNTXViewController.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Octicons.h"
 #import "NSString+Octicons.h"
 
 @interface SNTXViewController () {
