@@ -10,7 +10,7 @@
 //  https://github.com/pepibumur/ios-fontawesome
 //
 
-#import "UIImage+Octions.h"
+#import "UIImage+Octicons.h"
 #import "NSString+Octicons.h"
 
 @implementation UIImage (Octions)
