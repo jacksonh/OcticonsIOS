@@ -23,7 +23,7 @@
 		7A1DA84517F25B300029024C /* OcticonsIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA84417F25B300029024C /* OcticonsIOSTests.m */; };
 		7A1DA85017F25B7D0029024C /* UIFont+Octicons.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA84F17F25B7D0029024C /* UIFont+Octicons.m */; };
 		7A1DA85317F25C310029024C /* NSString+Octicons.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA85217F25C310029024C /* NSString+Octicons.m */; };
-		7A1DA85617F26AC30029024C /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA85517F26AC30029024C /* UIImage+Octions.m */; };
+		7A1DA85617F26AC30029024C /* UIImage+Octicons.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA85517F26AC30029024C /* UIImage+Octicons.m */; };
 		7A1DA85817F27C500029024C /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA85717F27C500029024C /* octicons.ttf */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +61,8 @@
 		7A1DA84F17F25B7D0029024C /* UIFont+Octicons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Octicons.m"; sourceTree = "<group>"; };
 		7A1DA85117F25C310029024C /* NSString+Octicons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Octicons.h"; sourceTree = "<group>"; };
 		7A1DA85217F25C310029024C /* NSString+Octicons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Octicons.m"; sourceTree = "<group>"; };
-		7A1DA85417F26AC30029024C /* UIImage+Octions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Octions.h"; sourceTree = "<group>"; };
-		7A1DA85517F26AC30029024C /* UIImage+Octions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octions.m"; sourceTree = "<group>"; };
+		7A1DA85417F26AC30029024C /* UIImage+Octicons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Octicons.h"; sourceTree = "<group>"; };
+		7A1DA85517F26AC30029024C /* UIImage+Octicons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octicons.m"; sourceTree = "<group>"; };
 		7A1DA85717F27C500029024C /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,8 +132,8 @@
 				7A1DA84F17F25B7D0029024C /* UIFont+Octicons.m */,
 				7A1DA85117F25C310029024C /* NSString+Octicons.h */,
 				7A1DA85217F25C310029024C /* NSString+Octicons.m */,
-				7A1DA85417F26AC30029024C /* UIImage+Octions.h */,
-				7A1DA85517F26AC30029024C /* UIImage+Octions.m */,
+				7A1DA85417F26AC30029024C /* UIImage+Octicons.h */,
+				7A1DA85517F26AC30029024C /* UIImage+Octicons.m */,
 				7A1DA83117F25B2F0029024C /* Images.xcassets */,
 				7A1DA81D17F25B2F0029024C /* Supporting Files */,
 			);
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1DA85317F25C310029024C /* NSString+Octicons.m in Sources */,
-				7A1DA85617F26AC30029024C /* UIImage+Octions.m in Sources */,
+				7A1DA85617F26AC30029024C /* UIImage+Octicons.m in Sources */,
 				7A1DA85017F25B7D0029024C /* UIFont+Octicons.m in Sources */,
 				7A1DA82317F25B2F0029024C /* main.m in Sources */,
 				7A1DA83017F25B2F0029024C /* SNTXViewController.m in Sources */,
