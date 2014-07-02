@@ -3,7 +3,7 @@
 //  OcticonsIOS
 //
 //  Created by Jackson Harper on 9/24/13.
-//  Copyright (c) 2013 SyntaxTree, Inc. All rights reserved.
+//  Copyright (c) 2013 Harper Semiconductors, Inc.
 //
 
 #import "SNTXAppDelegate.h"
