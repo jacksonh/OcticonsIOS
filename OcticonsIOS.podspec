@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'apache', :file => 'LICENSE' }
   s.summary      = "Add GitHub's Octions to your project"
   s.homepage     = "https://github.com/jacksonh/OcticonIOS"
-  s.author       = { "Jackson Harper" => "jacksonh@syntaxtree.com" }
+  s.author       = { "Jackson Harper" => "jacksonh@gmail.com" }
   s.source = {
     :git => 'https://github.com/jacksonh/OcticonsIOS.git',
     :tag => 'v0.0.2'
