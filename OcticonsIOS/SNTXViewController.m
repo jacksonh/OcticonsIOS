@@ -16,23 +16,12 @@
 
 @end
 
-
-
 @implementation SNTXViewController
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-	if (self) {
-		_currentIcon = OCTIconAlert;
-	}
-	return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+	_currentIcon = OCTIconAlert;
 	[self sntx_displayCurrentIcon];
 }
 
@@ -51,7 +40,7 @@
 
 - (IBAction)iconButtonTapped:(id)sender
 {
-	_currentIcon = (_currentIcon + 1) % OCTIconZap;
+	_currentIcon = (_currentIcon + 1) % (OCTIconZap + 1);
 	[self sntx_displayCurrentIcon];
 }
 @end
