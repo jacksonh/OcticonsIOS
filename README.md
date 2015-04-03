@@ -25,6 +25,6 @@ Installation
 
 The easiest way to install OcticonsIOS is with [CocoaPods](http://cocoapods.org). Just add the following to your Podfile:
 
-    pod 'OcticonsIOS', '~> 0.0.2'
+    pod 'OcticonsIOS', '~> 0.0.3'
 
     
