@@ -27,4 +27,4 @@ The easiest way to install OcticonsIOS is with [CocoaPods](http://cocoapods.org)
 
     pod 'OcticonsIOS', '~> 0.0.3'
 
-    
+Add the custom font to your Xcode project: in the application plist ([appname]-Info.plist), create a new row called "Fonts provided by application" and set the value to `octicons.ttf`.
